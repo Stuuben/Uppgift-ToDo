@@ -1,0 +1,52 @@
+body {
+  background-color: rgb(45, 45, 45);
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  margin-bottom: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  button {
+    background-color: rgb(247, 94, 94);
+    border-radius: 50%;
+    border-color: rgb(7, 7, 7);
+    color: white;
+  }
+}
+button {
+  background-color: greenyellow;
+}
+
+#unchecked,
+#checked {
+  background-color: rgb(160, 112, 249);
+  min-height: 5rem;
+  color: black;
+  border-radius: 10px;
+
+  li {
+    font-size: 16pt;
+    padding: 4px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+  }
+}
+#checked {
+  background-color: rgb(101, 243, 101);
+}
