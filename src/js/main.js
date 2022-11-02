@@ -26,7 +26,7 @@ function renderList() {
     console.log(toDos[i]);
     let listItem = document.createElement("li");
 
-    // THIS IS NEW
+    
     const wrapper = document.createElement("div");
     const title = document.createElement("span");
 
