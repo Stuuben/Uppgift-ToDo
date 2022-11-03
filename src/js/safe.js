@@ -45,18 +45,20 @@ function renderList() {
     });
 
     button.addEventListener("click", () => removeToDo(i));
-    sortButton.addEventListener("click", () => sortList(i));
+    downButton.addEventListener("click", () => moveDown(i));
    
 
     title.innerText = toDos[i].title;
     button.innerHTML = "X";
-   
+    downButton.innerHTML = "↓"
+
 
     wrapper.append(checkbox, title);
-    buttonWrapper.appendChild(button)
+    buttonWrapper.append(downButton, button)
    
     listItem.appendChild(wrapper);
     listItem.appendChild(buttonWrapper)
+   
    
 
     if (toDos[i].isDone) {
@@ -67,7 +69,9 @@ function renderList() {
   }
 }
 
-function sortList() {
+
+
+function moveDown() {
     toDos.sort(function (a, b) {
         if (a.title < b.title) {
           return -1;
@@ -82,9 +86,8 @@ function sortList() {
     renderList();
 }
 
-
 function removeToDo(i) {
-
+  //tar bort ut listan
   console.log("click");
   toDos.splice(i, 1);
   renderList();
@@ -99,7 +102,5 @@ function myAddButton() {
     userInput.value = "";
     renderList();
     console.log(toDos);
-
- 
   }
 }
